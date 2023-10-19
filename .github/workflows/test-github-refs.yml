@@ -15,7 +15,7 @@ on:
 
 jobs:
  
-  Publish_Artifact:
+  test_github_refs:
 
     runs-on: [self-hosted, linux, x64, philips-code-hub, ubuntu-latest]
 
