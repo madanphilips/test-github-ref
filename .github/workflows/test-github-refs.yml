@@ -23,7 +23,8 @@ jobs:
       - name: Display branch info
         id: display_branch_info
         run: |
-          echo "printing branch ref ${{ github.ref }}"
-          echo "printing branch refname ${{ github.ref_name }}"
-          echo "printing branch head ref ${{ github.head_ref }}"
-          echo "printing branch base ref ${{ github.base_ref }}"  
+          echo "printing github.ref --- ${{ github.ref }}"
+          echo "printing github.ref_name --- ${{ github.ref_name }}"
+          echo "printing github.head_ref --- ${{ github.head_ref }}"
+          echo "printing github.base_ref --- ${{ github.base_ref }}"
+          echo "printing github.event_name --- ${{ github.event_name }}"
