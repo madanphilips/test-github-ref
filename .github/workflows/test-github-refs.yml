@@ -1,0 +1,29 @@
+name: Test GitHub Refs
+
+on:
+  push:
+    branches: 
+      - main
+
+  pull_request:
+    types:
+      - closed
+    branches: 
+      - main
+  
+  workflow_dispatch:
+
+jobs:
+ 
+  Publish_Artifact:
+
+    runs-on: [self-hosted, linux, x64, philips-code-hub, ubuntu-latest]
+
+    steps:
+      - name: Display branch info
+        id: display_branch_info
+        run: |
+          echo "printing branch ref ${{ github.ref }}"
+          echo "printing branch refname ${{ github.ref_name }}"
+          echo "printing branch head ref ${{ github.head_ref }}"
+          echo "printing branch base ref ${{ github.base_ref }}"  
