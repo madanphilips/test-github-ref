@@ -17,7 +17,7 @@ jobs:
  
   test_github_refs:
 
-    runs-on: [self-hosted, linux, x64, philips-code-hub, ubuntu-latest]
+    runs-on: ubuntu-latest
 
     steps:
       - name: Display branch info
